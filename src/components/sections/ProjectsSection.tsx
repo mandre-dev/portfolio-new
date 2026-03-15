@@ -34,10 +34,10 @@ export default function ProjectsSection({ preview = false }: Props) {
       <div className="flex items-center justify-between mb-8">
         <div>
           <h2 className="text-[22px] font-bold tracking-tight" style={{ color: 'var(--text)' }}>
-            {preview ? 'Projetos em destaque' : 'Todos os projetos'}
+            {preview ? 'Projetos em destaque' : 'Meus Projetos'}
           </h2>
           <p className="text-sm mt-0.5 font-light" style={{ color: 'var(--muted)' }}>
-            {preview ? 'Trabalhos recentes selecionados' : 'Do conceito à produção.'}
+            {preview ? 'Trabalhos recentes selecionados' : 'Confira abaixo ⬇'}
           </p>
         </div>
       </div>
