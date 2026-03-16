@@ -104,13 +104,18 @@ export default function ContactSection() {
             </div>
 
             {/* Form fields */}
-            <div className="flex flex-col gap-3.5">
+            <form
+              action="https://formspree.io/f/xaqppwva"
+              method="POST"
+              className="flex flex-col gap-3.5"
+            >
               <div className="grid grid-cols-2 gap-3.5">
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-semibold" style={{ color: 'var(--muted)' }}>
                     Nome
                   </label>
                   <input
+                    name="nome"
                     type="text"
                     placeholder="Seu nome"
                     className="rounded-[10px] px-3.5 py-2.5 text-sm outline-none transition-all"
@@ -129,6 +134,7 @@ export default function ContactSection() {
                     Email
                   </label>
                   <input
+                    name="email"
                     type="email"
                     placeholder="seu@email.com"
                     className="rounded-[10px] px-3.5 py-2.5 text-sm outline-none transition-all"
@@ -148,6 +154,7 @@ export default function ContactSection() {
                   Assunto
                 </label>
                 <input
+                  name="assunto"
                   type="text"
                   placeholder="Projeto, vaga, parceria..."
                   className="rounded-[10px] px-3.5 py-2.5 text-sm outline-none transition-all"
@@ -166,6 +173,7 @@ export default function ContactSection() {
                   Mensagem
                 </label>
                 <textarea
+                  name="mensagem"
                   placeholder="Descreva o projeto ou oportunidade..."
                   rows={4}
                   className="rounded-[10px] px-3.5 py-2.5 text-sm outline-none transition-all resize-y"
@@ -180,14 +188,14 @@ export default function ContactSection() {
                 />
               </div>
               <button
+                type="submit"
                 className="flex items-center gap-2 px-7 py-3 rounded-[10px] text-white text-sm font-semibold w-fit transition-all hover:opacity-90 hover:-translate-y-px"
                 style={{ background: 'var(--grad)' }}
-                onClick={() => alert('Configure com Formspree ou seu backend!')}
               >
                 Enviar mensagem
               </button>
+            </form>
             </div>
-          </div>
         </motion.div>
 
         {/* Links + location */}
