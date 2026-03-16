@@ -31,43 +31,34 @@ export const NAV_ITEMS: NavItem[] = [
 ]
 
 export const PROJECTS: Project[] = [
+  
   {
-    id: 'saas-platform',
-    title: 'SaaS Platform',
-    description: 'Plataforma completa com auth, billing Stripe e painel admin.',
-    longDescription: 'Plataforma SaaS completa com autenticação JWT, billing integrado com Stripe, painel admin e API pública documentada. Deploy em VPS com zero-downtime rolling update.',
-    tech: ['Next.js', 'Node.js', 'PostgreSQL', 'Docker', 'Stripe', 'Redis'],
-    category: 'fullstack',
-    color: 'blue',
-    infra: [
-      'Docker Compose (app + db + redis + nginx)',
-      'GitHub Actions CI/CD',
-      'SSL via Let\'s Encrypt automático',
-      'Monitoramento com Grafana',
-      'Backup automatizado do banco',
-    ],
-  },
-  {
-    id: 'api-gateway',
-    title: 'API Gateway',
-    description: 'Gateway com rate limiting, JWT e docs Swagger auto-gerada.',
-    longDescription: 'Gateway de API com rate limiting por IP e por usuário, autenticação JWT, logging estruturado com Winston e documentação Swagger auto-gerada. 50k req/dia.',
-    tech: ['Fastify', 'Redis', 'Swagger', 'Docker', 'TypeScript'],
+    id: 'marvert',
+    title: 'Marvert',
+    image: '/logo.png',
+    description: 'Aplicação web para conversão de arquivos com foco em performance e UX.',
+    // descrição completa — sem truncar:
+    longDescription: 'Aplicação web para conversão entre PDF, DOCX, XLSX, JPG e PNG, com foco em performance e UX. Deploy automatizado via Vercel com GitHub Actions.',
+    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
     category: 'backend',
     color: 'purple',
+    githubUrl: 'https://github.com/mandre-dev/marvert',  // seu link real
+    liveUrl: 'https://marvert.com',  // se tiver
   },
   {
-    id: 'devops-dashboard',
-    title: 'DevOps Dashboard',
-    description: 'Monitoramento em tempo real com alertas e histórico de deploys.',
-    longDescription: 'Dashboard de monitoramento com métricas em tempo real via Prometheus, alertas customizados e histórico de deploys.',
-    tech: ['Grafana', 'Prometheus', 'Docker', 'Nginx'],
+    id: 'pipeline-devops',
+    title: 'Pipeline DevOps',
+    image: '/pipeline-devops.png',
+    description: 'Projeto robusto de Arquitetura de Software e DevOps End-to-End.',
+    longDescription: 'API REST em Python (FastAPI) com banco MySQL, documentada via Swagger. Containerizada com Docker, orquestrada com Kubernetes, infraestrutura provisionada na AWS (EKS + RDS) com Terraform e pipeline de CI/CD via GitHub Actions. Monitoramento com Prometheus + Grafana..',
+    tech: ['Python', 'FastAPI', 'Docker', 'Kubernetes', 'AWS', 'Terraform', 'CI/CD', 'Prometheus', 'Grafana'],
     category: 'devops',
     color: 'teal',
   },
   {
     id: 'portfolio',
     title: 'Este Portfólio',
+    image: '/mandre-circle.png',
     description: 'Next.js 14, TypeScript, Framer Motion, Three.js e deploy via CI/CD.',
     longDescription: 'O próprio portfólio como projeto técnico: Next.js 14 com App Router, TypeScript estrito, Three.js no hero, Framer Motion e deploy automático para VPS via GitHub Actions.',
     tech: ['Next.js 14', 'TypeScript', 'Three.js', 'Framer Motion', 'Tailwind'],

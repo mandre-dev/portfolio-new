@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { PROJECTS } from '@/lib/data'
-import { cn } from '@/lib/utils'
 import type { Project } from '@/types'
 
 const iconColors: Record<Project['color'], string> = {
@@ -49,63 +48,78 @@ export default function ProjectsSection({ preview = false }: Props) {
         className="flex flex-col gap-2.5"
       >
         {projects.map(project => (
-          <motion.div key={project.id} variants={item}>
-            <div
-              className="surface-card flex items-center justify-between gap-5 p-5 cursor-pointer group"
-              role="button"
-              tabIndex={0}
-            >
-              <div className="flex items-center gap-4 min-w-0">
-                {/* Icon */}
-                <div
-                  className="w-11 h-11 rounded-[10px] flex items-center justify-center text-white text-base font-extrabold flex-shrink-0"
-                  style={{ background: iconColors[project.color] }}
-                >
-                  {project.title[0]}
-                </div>
-
-                {/* Info */}
-                <div className="min-w-0">
-                  <div className="font-bold text-[15px] mb-0.5" style={{ color: 'var(--text)' }}>
-                    {project.title}
-                  </div>
+          <motion.a
+            key={project.id}
+            variants={item}
+            href={project.githubUrl ?? project.liveUrl ?? '#'}
+            target="_blank"
+            rel="noreferrer"
+            className="surface-card flex items-center justify-between gap-5 p-5 cursor-pointer group"
+            style={{ textDecoration: 'none' }}
+          >
+            <div className="flex items-center gap-4 min-w-0">
+              {/* Icon */}
+              <div
+                className="w-11 h-11 rounded-[10px] flex-shrink-0 overflow-hidden"
+              >
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                ) : (
+                  // fallback — letra inicial se não tiver imagem
                   <div
-                    className="text-[13px] font-light truncate max-w-[420px]"
-                    style={{ color: 'var(--muted)' }}
+                    className="w-full h-full flex items-center justify-center text-white text-base font-extrabold"
+                    style={{ background: iconColors[project.color] }}
                   >
-                    {project.description}
+                    {project.title[0]}
                   </div>
-                </div>
+                )}
               </div>
 
-              <div className="flex items-center gap-2.5 flex-shrink-0">
-                {/* Tech tags */}
-                <div className="flex gap-1.5 flex-wrap justify-end">
-                  {project.tech.slice(0, 4).map(t => (
-                    <span
-                      key={t}
-                      className="px-2.5 py-1 rounded-full text-[11px] font-semibold"
-                      style={{
-                        background: 'var(--surface2)',
-                        color: 'var(--accent-mid)',
-                        border: '1px solid #e0e7ff',
-                      }}
-                    >
-                      {t}
-                    </span>
-                  ))}
+              {/* Info */}
+              <div className="min-w-0">
+                <div className="font-bold text-[15px] mb-0.5" style={{ color: 'var(--text)' }}>
+                  {project.title}
                 </div>
-
-                {/* Arrow */}
-                <span
-                  className="text-lg transition-all group-hover:translate-x-1 group-hover:-translate-y-1"
-                  style={{ color: 'var(--hint)' }}
+                <div
+                  className="text-[13px] font-light max-w-[420px]"
+                  style={{ color: 'var(--muted)' }}
                 >
-                  ↗
-                </span>
+                  {project.description}
+                </div>
               </div>
             </div>
-          </motion.div>
+
+            <div className="flex items-center gap-2.5 flex-shrink-0">
+              {/* Tech tags */}
+              <div className="flex gap-1.5 flex-wrap justify-end">
+                {project.tech.slice(0, 4).map(t => (
+                  <span
+                    key={t}
+                    className="px-2.5 py-1 rounded-full text-[11px] font-semibold"
+                    style={{
+                      background: 'var(--surface2)',
+                      color: 'var(--accent-mid)',
+                      border: '1px solid #e0e7ff',
+                    }}
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              {/* Arrow */}
+              <span
+                className="text-lg transition-all group-hover:translate-x-1 group-hover:-translate-y-1"
+                style={{ color: 'var(--hint)' }}
+              >
+                ↗
+              </span>
+            </div>
+          </motion.a>
         ))}
       </motion.div>
     </section>
