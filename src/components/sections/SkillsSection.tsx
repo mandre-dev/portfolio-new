@@ -56,13 +56,11 @@ export default function SkillsSection() {
                   key={skill.name}
                   className={cn(
                     'px-3 py-1 rounded-md text-[12px] font-medium border transition-all cursor-default',
-                    skill.hot
-                      ? 'text-[var(--accent-2)]'
-                      : 'text-[var(--muted)] hover:text-[var(--accent-mid)]'
                   )}
                   style={{
-                    background: skill.hot ? '#ede9fe' : 'var(--surface2)',
-                    borderColor: skill.hot ? '#c4b5fd' : 'var(--border)',
+                    background: skill.hot ? 'var(--surface2)' : 'var(--surface2)',
+                    borderColor: skill.hot ? 'var(--accent-mid)' : 'var(--border)',
+                    color: skill.hot ? 'var(--accent-mid)' : 'var(--muted)',
                   }}
                 >
                   {skill.name}
