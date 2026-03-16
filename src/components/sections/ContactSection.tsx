@@ -2,6 +2,37 @@
 
 import { motion } from 'framer-motion'
 import { OWNER } from '@/lib/data'
+import { useState, useEffect } from 'react'
+
+//horário local em BRT (GMT-3), atualizado a cada segundo:
+
+function ClockBRT() {
+  const [time, setTime] = useState('')
+
+  useEffect(() => {
+    const update = () => {
+      const now = new Date().toLocaleTimeString('pt-BR', {
+        timeZone: 'America/Sao_Paulo',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+      })
+      setTime(now)
+    }
+    update()
+    const interval = setInterval(update, 1000)
+    return () => clearInterval(interval)
+  }, [])
+
+  return (
+    <span>
+      Horário local:{' '}
+      <strong style={{ color: 'var(--text)', fontFamily: 'var(--font-jetbrains)' }}>
+        {time} BRT
+      </strong>
+    </span>
+  )
+}
 
 export default function ContactSection() {
   return (
@@ -279,8 +310,7 @@ export default function ContactSection() {
                 color: 'var(--muted)',
               }}
             >
-              Fuso horário:{' '}
-              <strong style={{ color: 'var(--text)' }}>{OWNER.timezone}</strong>
+              <ClockBRT />
             </div>
           </div>
         </motion.div>
