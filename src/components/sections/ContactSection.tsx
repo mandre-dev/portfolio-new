@@ -11,7 +11,7 @@ export default function ContactSection() {
           Vamos conversar
         </h2>
         <p className="text-sm mt-0.5 font-light" style={{ color: 'var(--muted)' }}>
-          Aberto a projetos, vagas CLT/PJ e consultorias.
+          Aberto a projetos, vagas e consultorias.
         </p>
       </div>
 
