@@ -38,10 +38,9 @@ export default function HeroSection({ onNavigate }: HeroProps) {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background:
-            'linear-gradient(to right, var(--surface) 20%, transparent 50%)',
-      }}
-    />
+          background: 'linear-gradient(to right, var(--surface) 20%, transparent 50%)',
+        }}
+      />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center px-10 py-20" style={{ minHeight: '92vh' }}>
@@ -50,33 +49,33 @@ export default function HeroSection({ onNavigate }: HeroProps) {
           <span
             className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[11px] font-semibold"
             style={{
-              background: 'var(--success-bg)',
-              border: '1px solid var(--success-border)',
-              color: 'var(--success)',
+              background: 'rgba(22, 163, 74, 0.1)',
+              border: '1px solid rgba(22, 163, 74, 0.35)',
+              color: '#16a34a',
             }}
           >
             <span
               className="w-1.5 h-1.5 rounded-full animate-pulse-dot"
-              style={{ background: 'var(--success)' }}
+              style={{ background: '#16a34a' }}
             />
-            Seja bem-vindo ao meu portifólio!
+            Seja bem-vindo ao meu portf&oacute;lio!
           </span>
         </motion.div>
 
         {/* Name */}
         <motion.h1
-        {...fadeUp(0.1)}
-        className="font-display mb-2 leading-[0.95]"
+          {...fadeUp(0.1)}
+          className="font-display mb-2 leading-[0.95]"
           style={{
             fontSize: 'clamp(52px, 8vw, 96px)',
             fontFamily: 'var(--font-cabinet)',
             fontWeight: 800,
             letterSpacing: '-3px',
             color: 'var(--text)',
-        }}
+          }}
         >
           Marcos André<br />
-          <span className="grad-text">Mendonça.</span>
+          <span className="grad-text">Mendon&ccedil;a.</span>
         </motion.h1>
 
         {/* Role */}
@@ -86,11 +85,8 @@ export default function HeroSection({ onNavigate }: HeroProps) {
           style={{ color: 'var(--muted)' }}
         >
           Desenvolvedor{' '}
-          <span
-            className="font-semibold"
-            style={{ color: 'var(--accent-mid)' }}
-          >
-            Full-Stack & DevOps
+          <span className="font-semibold" style={{ color: 'var(--accent-mid)' }}>
+            Full-Stack &amp; DevOps
           </span>
         </motion.p>
 
@@ -115,17 +111,16 @@ export default function HeroSection({ onNavigate }: HeroProps) {
         >
           Desenvolvedor Full-Stack{' '}
           <strong style={{ color: 'var(--text)', fontWeight: 600 }}>
-            (Pyhton/JavaScript)
+            (Python/JavaScript)
           </strong>{' '}
-          com aptidão para{' '}
+          com aptid&atilde;o para{' '}
           <strong style={{ color: 'var(--text)', fontWeight: 600 }}>
-            Devops{' '} 
-          </strong>
-           e automação de processos com{' '} 
+            DevOps
+          </strong>{' '}
+          e automa&ccedil;&atilde;o de processos com{' '}
           <strong style={{ color: 'var(--text)', fontWeight: 600 }}>
-              API's escaláveis.
+            APIs escal&aacute;veis.
           </strong>
-           
         </motion.p>
 
         {/* CTAs */}
@@ -170,15 +165,10 @@ export default function HeroSection({ onNavigate }: HeroProps) {
               >
                 {m.label}
               </div>
-              <div
-                className="text-[32px] font-extrabold leading-none tracking-tight grad-text"
-              >
+              <div className="text-[32px] font-extrabold leading-none tracking-tight grad-text">
                 {m.value}
               </div>
-              <div
-                className="text-xs mt-1 font-medium"
-                style={{ color: 'var(--success)' }}
-              >
+              <div className="text-xs mt-1 font-medium" style={{ color: 'var(--success)' }}>
                 {m.sub}
               </div>
             </motion.div>
