@@ -20,7 +20,7 @@ function CSSFallback() {
         .orb-ring {
           position: absolute;
           border-radius: 50%;
-          border: 3px solid rgba(99, 102, 241, 0.7);
+          border: 3px solid rgba(99, 102, 242, 0.7);
           animation: orb-rotate linear infinite;
         }
         .avatar-wrap {
