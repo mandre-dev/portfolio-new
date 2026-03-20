@@ -20,7 +20,7 @@ function CSSFallback() {
         .orb-ring {
           position: absolute;
           border-radius: 50%;
-          border: 3px solid rgba(99, 102, 242, 0.7);
+          border: 3px solid rgba(99, 102, 241, 0.7);
           animation: orb-rotate linear infinite;
         }
         .avatar-wrap {
@@ -33,11 +33,7 @@ function CSSFallback() {
         }
       `}</style>
 
-      {/* Foto circular com animação */}
-      <div
-        className="avatar-wrap"
-        style={{ width: 250, height: 250, animationDuration: '3.5s' }}
-      >
+      <div className="avatar-wrap" style={{ width: 250, height: 250, animationDuration: '3.5s' }}>
         <img
           src="/mandre-circle.png"
           alt="Marcos André Mendonça"
@@ -45,37 +41,12 @@ function CSSFallback() {
         />
       </div>
 
-      {/* Anéis orbitando */}
       {[480, 340, 410].map((size, i) => (
-        <div
-          key={size}
-          className="orb-ring"
-          style={{
-            width: size,
-            height: size,
-            animationDuration: `${8 + i * 4}s`,
-            animationDirection: i % 2 === 0 ? 'normal' : 'reverse',
-          }}
-        />
+        <div key={size} className="orb-ring" style={{ width: size, height: size, animationDuration: `${8 + i * 4}s`, animationDirection: i % 2 === 0 ? 'normal' : 'reverse' }} />
       ))}
 
-      {/* Partículas flutuando */}
       {Array.from({ length: 12 }).map((_, i) => (
-        <div
-          key={i}
-          style={{
-            position: 'absolute',
-            width: 3 + (i % 3),
-            height: 3 + (i % 3),
-            borderRadius: '50%',
-            background: i % 2 === 0 ? '#6366f1' : '#7c3aed',
-            opacity: 0.5,
-            left: `${15 + (i * 7) % 70}%`,
-            top: `${10 + (i * 11) % 80}%`,
-            animation: `particle-drift ${2.5 + i * 0.4}s ease-in-out infinite`,
-            animationDelay: `${i * 0.3}s`,
-          }}
-        />
+        <div key={i} style={{ position: 'absolute', width: 3 + (i % 3), height: 3 + (i % 3), borderRadius: '50%', background: i % 2 === 0 ? '#6366f1' : '#7c3aed', opacity: 0.5, left: `${15 + (i * 7) % 70}%`, top: `${10 + (i * 11) % 80}%`, animation: `particle-drift ${2.5 + i * 0.4}s ease-in-out infinite`, animationDelay: `${i * 0.3}s` }} />
       ))}
     </div>
   )
@@ -83,4 +54,4 @@ function CSSFallback() {
 
 export default function HeroCanvas() {
   return <CSSFallback />
-} 
+}
