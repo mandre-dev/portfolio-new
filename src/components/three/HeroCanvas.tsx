@@ -1,6 +1,10 @@
 'use client'
 
+import { useState } from 'react'
+
 function CSSFallback() {
+  const [imageError, setImageError] = useState(false)
+
   return (
     <div className="w-full h-full flex items-center justify-center relative overflow-hidden">
       <style>{`
@@ -34,11 +38,18 @@ function CSSFallback() {
       `}</style>
 
       <div className="avatar-wrap" style={{ width: 250, height: 250, animationDuration: '3.5s' }}>
-        <img
-          src="/mandre-circle.png"
-          alt="Marcos André Mendonça"
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-        />
+        {!imageError ? (
+          <img
+            src="/mandre-circle.png"
+            alt="Marcos André Mendonça"
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '18px' }}>
+            Imagem não encontrada
+          </div>
+        )}
       </div>
 
       {[480, 340, 410].map((size, i) => (
