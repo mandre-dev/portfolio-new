@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import { OWNER } from '@/lib/data'
 import { Bricolage_Grotesque, JetBrains_Mono, Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 
@@ -58,7 +59,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
       className={`${bricolage.variable} ${jetbrains.variable} ${jakarta.variable}`}
     >
-      <body>{children}</body>
+      <body style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>{children}</div>
+        <footer
+          className="flex items-center justify-between px-10 py-6 border-t text-xs"
+          style={{
+            borderColor: 'var(--border)',
+            background: 'var(--surface)',
+            color: 'var(--hint)',
+          }}
+        >
+          <div className="font-bold text-sm" style={{ color: 'var(--text)' }}>
+            Marcos <span className="grad-text">André</span> © {new Date().getFullYear()}
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span>Feito com</span>
+            {['Next.js 14', 'TypeScript', 'Framer Motion', 'Three.js'].map((tech, i, arr) => (
+              <span key={tech}>
+                <span style={{ color: 'var(--accent-mid)', fontWeight: 600 }}>{tech}</span>
+                {i < arr.length - 1 && <span style={{ color: 'var(--hint)' }}> · </span>}
+              </span>
+            ))}
+          </div>
+        </footer>
+      </body>
     </html>
   )
 }
