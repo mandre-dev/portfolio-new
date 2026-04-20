@@ -75,7 +75,7 @@ export default function HeroSection({ onNavigate }: HeroProps) {
           }}
         >
           Marcos André<br />
-          <span className="grad-text">Mendon&ccedil;a.</span>
+          <span className="grad-text">Mendon&ccedil;a</span>
         </motion.h1>
 
         {/* Role */}
