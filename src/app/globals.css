@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fontes injetadas via next/font no layout.tsx — não precisa de @import */
+
+:root {
+  /* As variáveis são injetadas pelo next/font automaticamente via className no <html> */
+  --font-display:  var(--font-cabinet);
+  --font-mono:     var(--font-jetbrains);
+  --font-body:     var(--font-jakarta);
+
+  /* Light mode */
+  --bg: #f8f9fc;
+  --surface: #ffffff;
+  --surface2: #f1f4fd;
+  --border: #e2e8f0;
+  --border-hover: #c7d2fe;
+  --text: #0f172a;
+  --muted: #64748b;
+  --hint: #94a3b8;
+  --nav-bg: rgba(255, 255, 255, 0.85);
+
+  --accent-blue: #4f63e8;
+  --accent-purple: #7c3aed;
+  --accent-mid: #6366f1;
+  --grad: linear-gradient(135deg, #4f63e8, #7c3aed);
+
+  --success: #16a34a;
+  --success-bg: #f0fdf4;
+  --success-border: #bbf7d0;
+
+  --radius: 10px;
+  --radius-lg: 14px;
+}
+
+.dark {
+  --bg: #0d0f14;
+  --surface: #151820;
+  --surface2: #1c2030;
+  --border: #252a38;
+  --border-hover: #4338ca;
+  --text: #e8eaf6;
+  --muted: #8892b0;
+  --hint: #4a5568;
+  --nav-bg: rgba(13, 15, 20, 0.88);
+
+  --success: #34d399;
+  --success-bg: rgba(52, 211, 153, 0.08);
+  --success-border: rgba(52, 211, 153, 0.2);
+}
+
+/* ── Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Cabinet Grotesk nos títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cabinet), sans-serif;
+  letter-spacing: -0.03em;
+}
+
+/* JetBrains Mono no código e badges */
+code, kbd, pre, .font-mono {
+  font-family: var(--font-jetbrains), monospace;
+}
+
+::selection { background: #c7d2fe; color: #1e1b4b; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent-mid); border-radius: 2px; }
+
+/* ── Utilities ── */
+.grad-text {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.grad-bg { background: var(--grad); }
+
+.surface-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.surface-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.08);
+}
