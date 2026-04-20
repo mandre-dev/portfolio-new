@@ -31,7 +31,18 @@ export const NAV_ITEMS: NavItem[] = [
 ]
 
 export const PROJECTS: Project[] = [
-  
+  {
+    id: 'manshot',
+    title: 'Manshot',
+    image: '/logo-manshot.png',
+    description: 'Aplicação de disparo em massa para E-mail, SMS e Telegram.',
+    longDescription: 'MANSHOT é uma plataforma moderna para organização de tarefas, focada em performance, design e facilidade de uso. Permite integração com múltiplos serviços e oferece recursos avançados para equipes e indivíduos. (Descrição editável)',
+    tech: ['Python', 'JavaScript','Celery', 'Uvicorn'],
+    category: 'fullstack',
+    color: 'indigo',
+    githubUrl: 'https://github.com/mandre-dev/manshot',
+    liveUrl: '',
+  },
   {
     id: 'marvert',
     title: 'Marvert',
@@ -54,12 +65,13 @@ export const PROJECTS: Project[] = [
     tech: ['Python', 'FastAPI', 'Docker', 'Kubernetes', 'AWS', 'Terraform', 'CI/CD', 'Prometheus', 'Grafana'],
     category: 'devops',
     color: 'teal',
+    githubUrl: 'https://github.com/mandre-dev/devops-project.git',
   },
   {
     id: 'portfolio',
     title: 'Este Portfólio',
     image: '/mandre-circle.png',
-    description: 'Next.js 14, TypeScript, Framer Motion, Three.js e deploy via CI/CD.',
+    description: 'Portifólio pessoal para demonstrar projetos e evolução na área tech.',
     longDescription: 'O próprio portfólio como projeto técnico: Next.js 14 com App Router, TypeScript estrito, Three.js no hero, Framer Motion e deploy automático para VPS via GitHub Actions.',
     tech: ['Next.js 14', 'TypeScript', 'Three.js', 'Framer Motion', 'Tailwind'],
     category: 'frontend',
