@@ -1,3 +1,4 @@
+// Alteração para testar deploy Vercel em 20/04/2026
 import type { Project, SkillGroup, Experience, NavItem } from '@/types'
 
 export const OWNER = {
@@ -139,10 +140,10 @@ export const SKILL_GROUPS: SkillGroup[] = [
 export const EXPERIENCES: Experience[] = [
   {
     id: 'empresa',
-    role: 'Assistente Administraivo',
+    role: 'Assistente Administraivo / Auxiliar de TI',
     company: 'UNIASSELVI · Presencial',
     period: '2026',
-    description: 'Atuei com atendimento de balcão e virtual para acadêmicos, suporte básico a usuários e orientação na utilização de sistemas internos. abertura de tickets/chamados por ordem de prioridade, análise de dados pormétricas via dashboards e configuração/instalação de sistemas operacionais.',
+    description: 'Atuei com atendimento de balcão e virtual para acadêmicos, suporte básico a usuários e orientação na utilização de sistemas internos. abertura de tickets/chamados por ordem de prioridade, análise de dados pormétricas via dashboards e configuração/instalação de sistemas operacionais (Windows) e impressoras.',
     tech: ['Excel', 'Windows', 'LMS', 'Micrsoft 365', 'Sydle'],
     current: true,
   },
