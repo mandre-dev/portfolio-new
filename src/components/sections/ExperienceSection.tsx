@@ -49,18 +49,18 @@ export default function ExperienceSection() {
                   style={{ color: 'var(--hint)' }}
                 >
                   {exp.period}
-                  {exp.current && (
-                    <span
-                      className="ml-2 px-2 py-0.5 rounded-full text-[10px] normal-case tracking-normal"
-                      style={{
-                        background: 'var(--success-bg)',
-                        color: 'var(--success)',
-                        border: '1px solid var(--success-border)',
-                      }}
-                    >
-                      atual
-                    </span>
-                  )}
+                  {/*
+                  <span
+                    className="ml-2 px-2 py-0.5 rounded-full text-[10px] normal-case tracking-normal"
+                    style={{
+                      background: 'var(--success-bg)',
+                      color: 'var(--success)',
+                      border: '1px solid var(--success-border)',
+                    }}
+                  >
+                    atual
+                  </span>
+                  */}
                 </div>
                 <div className="text-[15px] font-bold mb-0.5" style={{ color: 'var(--text)' }}>
                   {exp.role}

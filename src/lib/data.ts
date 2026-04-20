@@ -49,7 +49,7 @@ export const PROJECTS: Project[] = [
     image: '/logo.png',
     description: 'Aplicação web para conversão de arquivos com foco em performance e UX.',
     // descrição completa — sem truncar:
-    longDescription: 'Aplicação web para conversão entre PDF, DOCX, XLSX, JPG e PNG, com foco em performance e UX. Deployy automatizado via Vercel com GitHub Actions.',
+    longDescription: 'Aplicação web para conversão entre PDF, DOCX, XLSX, JPG e PNG, com foco em performance e UX. Deploy automatizado via Vercel com GitHub Actions.',
     tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
     category: 'backend',
     color: 'purple',
@@ -76,6 +76,7 @@ export const PROJECTS: Project[] = [
     tech: ['Next.js 14', 'TypeScript', 'Three.js', 'Framer Motion', 'Tailwind'],
     category: 'frontend',
     color: 'indigo',
+    githubUrl: 'https://github.com/mandre-dev/portfolio-new.git',
   },
 ]
 
@@ -137,10 +138,10 @@ export const SKILL_GROUPS: SkillGroup[] = [
 
 export const EXPERIENCES: Experience[] = [
   {
-    id: 'current',
+    id: 'empresa',
     role: 'Assistente Administraivo',
     company: 'UNIASSELVI · Presencial',
-    period: '2026 — Atual',
+    period: '2026',
     description: 'Atuei com atendimento de balcão e virtual para acadêmicos, suporte básico a usuários e orientação na utilização de sistemas internos. abertura de tickets/chamados por ordem de prioridade, análise de dados pormétricas via dashboards e configuração/instalação de sistemas operacionais.',
     tech: ['Excel', 'Windows', 'LMS', 'Micrsoft 365', 'Sydle'],
     current: true,
@@ -148,7 +149,7 @@ export const EXPERIENCES: Experience[] = [
   {
     id: 'empresa',
     role: 'Auxiliar de Almoxaridado',
-    company: 'Boibom · RJ',
+    company: 'Boibom · Presencial',
     period: '2025',
     description: 'Atuei no setor administrativo do almoxarifado da empresa, onde tive contato pude enxergar como um todo o ambiente emrpesaria e entender sobre algumas regras de négocio. Lidei com organização de estoque, controle de entrada e saída de materiais, além de auxiliar na gestão de fornecedores e logística.',
     tech: ['None'],
