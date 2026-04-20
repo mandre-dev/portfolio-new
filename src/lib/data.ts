@@ -49,7 +49,7 @@ export const PROJECTS: Project[] = [
     image: '/logo.png',
     description: 'Aplicação web para conversão de arquivos com foco em performance e UX.',
     // descrição completa — sem truncar:
-    longDescription: 'Aplicação web para conversão entre PDF, DOCX, XLSX, JPG e PNG, com foco em performance e UX. Deploy automatizado via Vercel com GitHub Actions.',
+    longDescription: 'Aplicação web para conversão entre PDF, DOCX, XLSX, JPG e PNG, com foco em performance e UX. Deployy automatizado via Vercel com GitHub Actions.',
     tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
     category: 'backend',
     color: 'purple',
