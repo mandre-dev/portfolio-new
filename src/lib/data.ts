@@ -139,21 +139,28 @@ export const SKILL_GROUPS: SkillGroup[] = [
 
 export const EXPERIENCES: Experience[] = [
   {
-    id: 'empresa',
+    id: 'SD Sistemas',
+    role: 'Técnico Help Desk',
+    company: 'SD Sistemas · Presencial / Remoto',
+    period: '2026',
+    description: 'Atuei no suporte técnico ao usuário fornecendo orientações de hardware/software e regras fiscais. Rotineirtamente lidava com aberturas de chamamados, acessos remotos, administração de redes e identificação de problemas de conectividade e falahas do software. Contribuí ativamente na docuemntação de soluções práticas para a equipe e na identiifcação de melhorias de software para o setor de desenvolvimento.',
+    tech: ['TeamViewer', 'MoviDesk', 'Mikrotik', 'VPNs', 'Windows', 'Linux'],
+    current: true,
+  },
+  {
+    id: 'uniasselvi',
     role: 'Assistente Administraivo / Auxiliar de TI',
     company: 'UNIASSELVI · Presencial',
     period: '2026',
     description: 'Atuei com atendimento de balcão e virtual para acadêmicos, suporte básico a usuários e orientação na utilização de sistemas internos. abertura de tickets/chamados por ordem de prioridade, análise de dados pormétricas via dashboards e configuração/instalação de sistemas operacionais (Windows) e impressoras.',
     tech: ['Excel', 'Windows', 'LMS', 'Micrsoft 365', 'Sydle'],
-    current: true,
   },
   {
-    id: 'empresa',
+    id: 'boibom',
     role: 'Auxiliar de Almoxaridado',
     company: 'Boibom · Presencial',
     period: '2025',
     description: 'Atuei no setor administrativo do almoxarifado da empresa, onde tive contato pude enxergar como um todo o ambiente emrpesaria e entender sobre algumas regras de négocio. Lidei com organização de estoque, controle de entrada e saída de materiais, além de auxiliar na gestão de fornecedores e logística.',
     tech: ['None'],
   },
-
 ]
