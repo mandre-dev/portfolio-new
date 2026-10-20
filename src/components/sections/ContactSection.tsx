@@ -306,7 +306,7 @@ export default function ContactSection() {
               Localização
             </div>
             <div className="text-[15px] font-bold mb-1" style={{ color: 'var(--text)' }}>
-              Cabo Frio, RJ
+              Rio de Janeiro, RJ
             </div>
             <div className="text-[13px]" style={{ color: 'var(--muted)' }}>
               Brasil · Remoto ou presencial

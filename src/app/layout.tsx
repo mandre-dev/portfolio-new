@@ -30,10 +30,10 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: 'Marcos André — Fullstack Dev & DevOps',
   description:
-    'Desenvolvedor Full-Stack & DevOps especialista em Next.js, Node.js, Docker e CI/CD. Cabo Frio, RJ.',
+    'Desenvolvedor Full-Stack & DevOps especialista em Next.js, Node.js, Docker e CI/CD. Rio de Janeiro, RJ.',
   keywords: [
     'Fullstack Developer', 'DevOps Engineer', 'Next.js',
-    'Node.js', 'Docker', 'React', 'TypeScript', 'Cabo Frio', 'Brasil',
+    'Node.js', 'Docker', 'React', 'TypeScript', 'Rio de Janeiro', 'Brasil',
   ],
   authors: [{ name: 'Marcos André' }],
   openGraph: {
