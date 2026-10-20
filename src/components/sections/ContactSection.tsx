@@ -239,7 +239,7 @@ export default function ContactSection() {
                 },
                 { icon: 'in', name: 'LinkedIn', handle: OWNER.linkedinHandle, href: OWNER.linkedin },
                 { icon: '@', name: 'Email', handle: OWNER.email, href: `mailto:${OWNER.email}` },
-                { icon: '↓', name: 'Currículo', handle: 'Download PDF', href: '/Currículo-Marcos-André-2026.pdf' },
+                { icon: '↓', name: 'Currículo', handle: 'Download PDF', href: '' },
               ].map(link => (
                 <a
                   key={link.name}
